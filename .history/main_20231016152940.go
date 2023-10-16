@@ -22,7 +22,7 @@ func main() {
 		w.Write(res)
 	}).Methods("GET")
 
-	r.Use(middleware.LoggingMiddleware)
+		r.Use(middleware.)
 
 	log.Println("Server running on port 9000")
 	http.Handle("/", r) // Gunakan router mux sebagai handler

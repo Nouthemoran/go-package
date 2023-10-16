@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"go-package/middleware"
 	"net/http"
 
 	log "github.com/sirupsen/logrus"
@@ -22,7 +21,10 @@ func main() {
 		w.Write(res)
 	}).Methods("GET")
 
-	r.Use(middleware.LoggingMiddleware)
+	log.WithFields(log.Fields{
+		"animal": "walrus",
+		"size":   10,
+	}).Info("A group of walrus emerges from the ocean")
 
 	log.Println("Server running on port 9000")
 	http.Handle("/", r) // Gunakan router mux sebagai handler
