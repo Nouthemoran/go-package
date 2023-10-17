@@ -20,15 +20,15 @@ func main() {
 
 	r.HandleFunc("/users", controller.Index).Methods("GET")
 
-	r.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Content-Type", "application/json")
-		// CARA 1
-		// json.NewEncoder(w).Encode(map[string]bool{"ok": true})
+	// r.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
+	// 	w.Header().Set("Content-Type", "application/json")
+	// 	// CARA 1
+	// 	// json.NewEncoder(w).Encode(map[string]bool{"ok": true})
 
-		// cara 2
-		res, _ := json.Marshal(map[string]bool{"ok": true})
-		w.Write(res)
-	}).Methods("GET")
+	// 	// cara 2
+	// 	res, _ := json.Marshal(map[string]bool{"ok": true})
+	// 	w.Write(res)
+	// }).Methods("GET")
 
 	r.Use(middleware.LoggingMiddleware)
 

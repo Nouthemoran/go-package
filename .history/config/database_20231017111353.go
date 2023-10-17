@@ -2,7 +2,6 @@ package config
 
 import (
 	"fmt"
-	"go-package/model"
 
 	log "github.com/sirupsen/logrus"
 
@@ -19,8 +18,7 @@ func ConnectDB() {
 		panic("failed to connect database")
 	}
 
-	// Migrate model User
-	db.AutoMigrate(&model.User{})
+	
 
 	DB = db
 

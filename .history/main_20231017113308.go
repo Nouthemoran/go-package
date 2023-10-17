@@ -18,7 +18,7 @@ func main() {
 
 	r := mux.NewRouter()
 
-	r.HandleFunc("/users", controller.Index).Methods("GET")
+	r.HandleFunc("/users", controller.Index
 
 	r.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")

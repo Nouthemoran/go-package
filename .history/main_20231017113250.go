@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"go-package/config"
-	"go-package/controller"
 	"go-package/middleware"
 	"net/http"
 
@@ -18,7 +17,7 @@ func main() {
 
 	r := mux.NewRouter()
 
-	r.HandleFunc("/users", controller.Index).Methods("GET")
+	r.HandleFunc("")
 
 	r.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
