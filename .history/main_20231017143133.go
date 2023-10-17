@@ -36,4 +36,3 @@ func main() {
 	http.Handle("/", r) // Gunakan router mux sebagai handler
 	http.ListenAndServe(":9000", nil)
 } 
-

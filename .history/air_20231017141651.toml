@@ -1,0 +1,12 @@
+# air.toml
+[build]
+cmd = ""
+delay = "2s"
+dir = "."
+exclude = "(.git|vendor)"
+full_bin = true
+log = "air.log"
+main = ""
+release = false
+skip = "(.test|.tmp)"
+sub_dir = ""
