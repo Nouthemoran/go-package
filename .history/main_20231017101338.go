@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"go-package/config"
 	"go-package/middleware"
 	"net/http"
 
@@ -12,7 +11,7 @@ import (
 )
 
 func main() {
-	config.LoadConfig()
+	config := 
 
 	r := mux.NewRouter()
 	r.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
@@ -31,3 +30,4 @@ func main() {
 	http.Handle("/", r) // Gunakan router mux sebagai handler
 	http.ListenAndServe(":9000", nil)
 }
+
