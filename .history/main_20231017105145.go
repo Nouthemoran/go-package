@@ -13,7 +13,7 @@ import (
 
 func main() {
 	config.LoadConfig()
-	config.ConnectDB()
+	config.Con
 
 	r := mux.NewRouter()
 	r.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
